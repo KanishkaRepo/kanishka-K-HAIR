@@ -39,7 +39,7 @@ function preload()
 
 function setup() {
 
-	createCanvas(displayWidth-10, displayHeight-10);
+	createCanvas(windowWidth, windowHeight);
 
 
 
@@ -47,38 +47,38 @@ function setup() {
 	//world = engine.world;
 
 	//Create the Bodies Here.
-	logo = createSprite(250, 300, 700, 600);
+	logo = createSprite(width-1100, height-320);
 	logo.addImage("logo" ,logoImage);
-	logo.scale = 0.5;
+	logo.scale = 0.45;
 
-	menuIcon = createSprite(displayWidth-200, 45,10, 10);
+	menuIcon = createSprite(displayWidth-200, displayHeight-720);
 	menuIcon.addImage("icon", menuImage);
 	menuImage.scale = 0.1;
 
 	gameState = "contactUS";
 	// gameState = "mainMenu"
 
-	nextButton = createSprite(450, height-200, 100, 50);
+	nextButton = createSprite(width-350, height-70);
 	nextButton.addImage("next", nextImage);
 	nextButton.scale = 0.5;
 	nextButton.visible = false;
 
-	phoneNumber = createSprite(width/2.2, 280)
+	phoneNumber = createSprite(width/2.2, height/2)
 	phoneNumber.addImage("phone", phoneImage);
 	phoneNumber.scale = 0.5;
 	phoneNumber.visible = false;
 
-	phoneNo2 = createSprite(width/2.2, 380);
+	phoneNo2 = createSprite(width/2.2, height/1.6);
 	phoneNo2.addImage("phone",numberImage);
 	phoneNo2.scale = 0.5;
 	phoneNo2.visible = false;
 
-	 dummy = createSprite(260, 100, 20, 40);
+	 dummy = createSprite(width-790, height/3.9);
 	 dummy.addImage("icon", dummyImage);
 	 dummy.scale = 0.2;
 	 dummy.visible = false;
 
-	 address = createSprite(width/2.2, 460);
+	 address = createSprite(width/2.2, height/1.3);
 	 address.addImage("adress", addressImage);
 	 address.scale = 0.6;
 	  address.visible = false;
