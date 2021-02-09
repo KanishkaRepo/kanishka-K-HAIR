@@ -109,7 +109,7 @@ function draw() {
 //   }
 
   if(mousePressedOver(contactUs) || touches.length > 0){
-	touches = [];
+	for(var i=0; i<touches.length;i++){ if(touches[i].y <= contactUs.y ){
 	   console.log(touches.length);
 	   console.log(touches);
 	   logo.visible = false;
@@ -120,11 +120,11 @@ function draw() {
 	   phoneNo2.visible = true;
 	   dummy.visible = true;
 	   address.visible = true;
-
+	}
   }
 
   if(mousePressedOver(gallery) || touches.length > 0){
-	touches = [];
+	for(var i=0; i<touches.length;i++){ if(touches[i].y <= gallery.y ){
 	logo.visible = false;
 	nextButton.visible = true;
 	hideContactDetails();
@@ -132,7 +132,7 @@ function draw() {
 	phoneNo2.visible = false;
 	dummy.visible = false;
 	address.visible = false;
-
+	}
 }
   
 
